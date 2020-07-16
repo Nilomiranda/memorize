@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack() {
+        HStack(spacing: 50) {
             ForEach(0..<4) { index in
                 CardView(isFaceUp: true)
             }
@@ -37,8 +37,30 @@ struct CardView: View {
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+// some other illustrative examples
+
+struct CustomText: View {
+    var body: some View {
+        ZStack {
+            Text("hi")
+            Text("hi")
+        }
+    }
+}
+
+struct ZStackExample: View {
+    var body: some View {
+        ZStack {
+            Text("Orange text")
+            Text("Green text")
+            Text("Blue text")
+        }
     }
 }
